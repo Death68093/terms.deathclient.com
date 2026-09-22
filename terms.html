@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="DeathClient Terms of Service and Privacy Policy."
+    >
+
+    <title>DeathClient - Terms of Service & Privacy Policy</title>
+
+    <style>
+        :root {
+            --bg: #080808;
+            --bg-soft: #101010;
+            --panel: #131313;
+            --panel-hover: #181818;
+            --border: #292929;
+            --border-red: #5c1010;
+            --red: #d60000;
+            --red-bright: #ff1a1a;
+            --red-dark: #8e0000;
+            --text: #f2f2f2;
+            --text-soft: #c8c8c8;
+            --muted: #8e8e8e;
+            --success: #65d98c;
+            --warning: #ffcc66;
+            --danger: #ff6b6b;
+            --radius: 12px;
+            --max-width: 1150px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(
+                    circle at top,
+                    rgba(214, 0, 0, 0.10),
+                    transparent 35%
+                ),
+                var(--bg);
+            color: var(--text);
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--red-bright);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ::selection {
+            background: rgba(214, 0, 0, 0.35);
+            color: #fff;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+
+            background: rgba(8, 8, 8, 0.92);
+            border-bottom: 1px solid var(--border);
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .topbar-inner {
+            width: min(
+                calc(100% - 32px),
+                var(--max-width)
+            );
+
+            min-height: 68px;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+
+            color: #fff;
+            font-weight: 900;
+            letter-spacing: 0.4px;
+            white-space: nowrap;
+        }
+
+        .brand-mark {
+            width: 12px;
+            height: 28px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    var(--red-bright),
+                    var(--red-dark)
+                );
+
+            border-radius: 3px;
+            box-shadow:
+                0 0 18px rgba(214, 0, 0, 0.30);
+        }
+
+        .brand span:last-child {
+            font-size: 17px;
+        }
+
+        .topbar-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .topbar-links a {
+            color: var(--text-soft);
+            padding: 8px 11px;
+            border-radius: 8px;
+            transition:
+                background 0.15s ease,
+                color 0.15s ease;
+        }
+
+        .topbar-links a:hover {
+            color: #fff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .hero {
+            width: min(
+                calc(100% - 32px),
+                var(--max-width)
+            );
+
+            margin: 0 auto;
+            padding: 82px 0 45px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 6px 10px;
+
+            border: 1px solid var(--border-red);
+            border-radius: 999px;
+
+            background: rgba(214, 0, 0, 0.06);
+            color: #ff9090;
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--red-bright);
+            box-shadow: 0 0 10px rgba(255, 26, 26, 0.7);
+        }
+
+        h1 {
+            margin: 18px 0 10px;
+
+            font-size:
+                clamp(
+                    38px,
+                    7vw,
+                    68px
+                );
+
+            line-height: 1.02;
+            letter-spacing: -2px;
+        }
+
+        .hero-title-red {
+            color: var(--red-bright);
+        }
+
+        .hero-description {
+            max-width: 790px;
+            margin: 0;
+
+            color: var(--text-soft);
+            font-size: 18px;
+        }
+
+        .updated {
+            margin-top: 18px;
+
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .layout {
+            width: min(
+                calc(100% - 32px),
+                var(--max-width)
+            );
+
+            margin: 0 auto 70px;
+
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1fr)
+                280px;
+
+            gap: 28px;
+
+            align-items: start;
+        }
+
+        .main {
+            min-width: 0;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 88px;
+        }
+
+        .toc {
+            padding: 18px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(255, 255, 255, 0.025),
+                    rgba(255, 255, 255, 0.01)
+                );
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .toc-title {
+            margin-bottom: 12px;
+
+            color: #fff;
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+        }
+
+        .toc a {
+            display: block;
+
+            padding: 7px 8px;
+
+            color: var(--text-soft);
+            border-radius: 7px;
+
+            font-size: 14px;
+
+            transition:
+                color 0.15s ease,
+                background 0.15s ease;
+        }
+
+        .toc a:hover {
+            color: #fff;
+            background: rgba(214, 0, 0, 0.08);
+            text-decoration: none;
+        }
+
+        .notice {
+            margin-bottom: 20px;
+            padding: 18px 20px;
+
+            border:
+                1px solid
+                rgba(214, 0, 0, 0.35);
+
+            border-left:
+                3px solid
+                var(--red-bright);
+
+            border-radius: var(--radius);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(214, 0, 0, 0.08),
+                    rgba(214, 0, 0, 0.025)
+                );
+        }
+
+        .notice-title {
+            margin-bottom: 5px;
+
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .notice p {
+            margin: 0;
+            color: var(--text-soft);
+        }
+
+        section {
+            scroll-margin-top: 90px;
+
+            margin-bottom: 28px;
+            padding: 30px;
+
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+
+            box-shadow:
+                0 12px 40px rgba(0, 0, 0, 0.18);
+        }
+
+        section h2 {
+            margin: 0 0 8px;
+
+            font-size: 27px;
+            line-height: 1.25;
+            letter-spacing: -0.4px;
+        }
+
+        section h2::before {
+            content: "";
+            display: inline-block;
+
+            width: 6px;
+            height: 24px;
+
+            margin-right: 11px;
+            vertical-align: -3px;
+
+            border-radius: 3px;
+            background: var(--red);
+        }
+
+        section h3 {
+            margin:
+                25px 0
+                9px;
+
+            color: #fff;
+            font-size: 18px;
+        }
+
+        p {
+            margin:
+                0 0
+                14px;
+
+            color: var(--text-soft);
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        strong {
+            color: #fff;
+        }
+
+        ul {
+            margin:
+                10px 0
+                16px;
+
+            padding-left: 23px;
+
+            color: var(--text-soft);
+        }
+
+        li {
+            margin-bottom: 7px;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0, 1fr)
+                );
+
+            gap: 12px;
+
+            margin-top: 16px;
+        }
+
+        .data-card {
+            padding: 17px;
+
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .data-card h4 {
+            margin: 0 0 5px;
+
+            color: #fff;
+            font-size: 15px;
+        }
+
+        .data-card p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin-top: 16px;
+
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th,
+        td {
+            padding: 13px 15px;
+            text-align: left;
+            vertical-align: top;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+            font-size: 14px;
+        }
+
+        th {
+            background: #171717;
+            color: #fff;
+            font-weight: 800;
+        }
+
+        td {
+            color: var(--text-soft);
+            background: #101010;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .badge {
+            display: inline-block;
+
+            padding: 3px 8px;
+
+            border-radius: 999px;
+
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.25px;
+        }
+
+        .badge-red {
+            color: #ffaaaa;
+            background: rgba(214, 0, 0, 0.12);
+            border: 1px solid rgba(214, 0, 0, 0.28);
+        }
+
+        .badge-green {
+            color: #9af0b4;
+            background: rgba(39, 174, 96, 0.10);
+            border: 1px solid rgba(39, 174, 96, 0.23);
+        }
+
+        .badge-yellow {
+            color: #ffe39a;
+            background: rgba(255, 204, 102, 0.08);
+            border: 1px solid rgba(255, 204, 102, 0.20);
+        }
+
+        .quota {
+            display: grid;
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0, 1fr)
+                );
+
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .quota-card {
+            padding: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #151515,
+                    #101010
+                );
+
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .quota-value {
+            margin-top: 2px;
+
+            color: #fff;
+            font-size: 24px;
+            font-weight: 900;
+        }
+
+        .quota-label {
+            color: var(--muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .faq {
+            margin-top: 10px;
+        }
+
+        details {
+            margin-bottom: 9px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 9px;
+
+            background: var(--bg-soft);
+
+            overflow: hidden;
+        }
+
+        summary {
+            cursor: pointer;
+
+            padding: 15px 16px;
+
+            color: #fff;
+            font-weight: 800;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-content {
+            padding: 14px 16px 16px;
+        }
+
+        .footer {
+            width: min(
+                calc(100% - 32px),
+                var(--max-width)
+            );
+
+            margin: 0 auto;
+            padding:
+                20px 0
+                50px;
+
+            color: var(--muted);
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+        .footer strong {
+            color: #fff;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+
+            margin-top: 8px;
+        }
+
+        .back-top {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            color: var(--red-bright);
+        }
+
+        @media (max-width: 900px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+                order: -1;
+            }
+
+            .toc {
+                display: grid;
+                grid-template-columns:
+                    repeat(
+                        2,
+                        minmax(0, 1fr)
+                    );
+
+                gap: 4px 8px;
+            }
+
+            .toc-title {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .topbar-links a:nth-child(1) {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 55px;
+            }
+
+            section {
+                padding: 22px;
+            }
+
+            .data-grid,
+            .quota {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar" id="top">
+        <div class="topbar-inner">
+            <a
+                class="brand"
+                href="https://deathclient.com"
+            >
+                <span class="brand-mark"></span>
+                <span>DeathClient</span>
+            </a>
+
+            <nav class="topbar-links">
+                <a href="#privacy">
+                    Privacy Policy
+                </a>
+
+                <a href="#terms">
+                    Terms
+                </a>
+
+                <a href="https://deathclient.com">
+                    Home
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                Legal &amp; Privacy
+            </div>
+
+            <h1>
+                DeathClient
+                <span class="hero-title-red">
+                    Terms &amp; Privacy
+                </span>
+            </h1>
+
+            <p class="hero-description">
+                This page explains the rules for using DeathClient
+                and how account information, cloud saves, player
+                data, and cosmetics are handled.
+            </p>
+
+            <div class="updated">
+                Last updated:
+                <strong>September 22, 2026</strong>
+            </div>
+        </div>
+
+        <div class="layout">
+            <div class="main">
+
+                <div class="notice">
+                    <div class="notice-title">
+                        Important information
+                    </div>
+
+                    <p>
+                        This document describes the DeathClient
+                        service and the account/cloud-saving system
+                        represented by the current server implementation.
+                        It is intended to explain the service clearly;
+                        it is not a substitute for legal advice.
+                    </p>
+                </div>
+
+                <!-- ===================================================== -->
+                <!-- PRIVACY POLICY                                         -->
+                <!-- ===================================================== -->
+
+                <section id="privacy">
+                    <h2>
+                        Privacy Policy
+                    </h2>
+
+                    <p>
+                        DeathClient respects the privacy of its users.
+                        The account system is designed primarily to
+                        provide authentication and cloud-saving
+                        functionality.
+                    </p>
+
+                    <p>
+                        Information associated with an account is used
+                        to provide the DeathClient services described on
+                        this page. DeathClient does not intentionally
+                        collect information that is not needed for those
+                        services through the account API.
+                    </p>
+                </section>
+
+                <section id="information-collected">
+                    <h2>
+                        Information We Store
+                    </h2>
+
+                    <p>
+                        When you create and use a DeathClient account,
+                        the service may store the following categories
+                        of information.
+                    </p>
+
+                    <div class="data-grid">
+                        <div class="data-card">
+                            <h4>
+                                Username
+                            </h4>
+
+                            <p>
+                                Your chosen DeathClient username is stored
+                                so that your account can be identified
+                                and authenticated.
+                            </p>
+                        </div>
+
+                        <div class="data-card">
+                            <h4>
+                                Password Hash
+                            </h4>
+
+                            <p>
+                                Your actual password is not stored as
+                                plaintext. The server hashes passwords
+                                using bcrypt before storing them.
+                            </p>
+                        </div>
+
+                        <div class="data-card">
+                            <h4>
+                                Cosmetics
+                            </h4>
+
+                            <p>
+                                Unlocked account cosmetics, including
+                                supported capes and other account
+                                cosmetics, may be stored with your
+                                account.
+                            </p>
+                        </div>
+
+                        <div class="data-card">
+                            <h4>
+                                Player Data
+                            </h4>
+
+                            <p>
+                                Your cloud profile, settings,
+                                statistics, achievements, and cosmetic
+                                data may be stored as part of cloud
+                                saving.
+                            </p>
+                        </div>
+
+                        <div class="data-card">
+                            <h4>
+                                Cloud World
+                            </h4>
+
+                            <p>
+                                You may store one cloud world through
+                                the provided world-saving system.
+                            </p>
+                        </div>
+
+                        <div class="data-card">
+                            <h4>
+                                World Metadata
+                            </h4>
+
+                            <p>
+                                The server stores information such as
+                                the world name, file size, and the time
+                                at which the world was saved.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>
+                        Information Not Included in the Account Database
+                    </h3>
+
+                    <p>
+                        Based on the server implementation provided for
+                        this policy, the account database does not ask
+                        users for their real name, postal address,
+                        telephone number, date of birth, or email
+                        address.
+                    </p>
+
+                    <p>
+                        The application account database also does not
+                        store plaintext passwords.
+                    </p>
+
+                    <p>
+                        Network infrastructure, hosting providers,
+                        security services, or web infrastructure used
+                        to operate DeathClient may independently process
+                        technical information such as network requests,
+                        connection metadata, or IP addresses. Such
+                        processing can depend on the infrastructure used
+                        to deliver the service and may be governed by
+                        the relevant provider's own policies.
+                    </p>
+                </section>
+
+                <section id="password-security">
+                    <h2>
+                        Password Security
+                    </h2>
+
+                    <p>
+                        DeathClient does not store account passwords in
+                        plaintext.
+                    </p>
+
+                    <p>
+                        When an account is created, the supplied password
+                        is processed using
+                        <strong>bcrypt</strong> with a work factor of
+                        <strong>12</strong> before it is stored.
+                    </p>
+
+                    <p>
+                        During authentication, the supplied password is
+                        compared against the stored bcrypt hash rather
+                        than being compared with a plaintext password.
+                    </p>
+
+                    <div class="notice">
+                        <div class="notice-title">
+                            Protect your password
+                        </div>
+
+                        <p>
+                            Do not reuse your DeathClient password on
+                            other websites or services. DeathClient
+                            cannot protect accounts on unrelated
+                            services using the same password.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="cloud-saving">
+                    <h2>
+                        Cloud Saving
+                    </h2>
+
+                    <p>
+                        DeathClient provides cloud-saving features that
+                        allow account-associated game information to be
+                        stored on the DeathClient server.
+                    </p>
+
+                    <h3>
+                        Player Data
+                    </h3>
+
+                    <p>
+                        The current service can store the following
+                        player-data categories:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Profile information
+                        </li>
+
+                        <li>
+                            Client and gameplay settings
+                        </li>
+
+                        <li>
+                            Cosmetic information
+                        </li>
+
+                        <li>
+                            Statistics
+                        </li>
+
+                        <li>
+                            Achievements
+                        </li>
+                    </ul>
+
+                    <h3>
+                        Cloud Worlds
+                    </h3>
+
+                    <p>
+                        Authenticated users may upload a world to the
+                        DeathClient cloud-saving system.
+                    </p>
+
+                    <p>
+                        The current server implementation applies a
+                        maximum cloud-world size of
+                        <strong>64 MB</strong> per account.
+                    </p>
+
+                    <p>
+                        The server stores the world as an
+                        <strong>EPK</strong> file and records metadata
+                        including its name, size, and save time.
+                    </p>
+
+                    <div class="quota">
+                        <div class="quota-card">
+                            <div class="quota-label">
+                                World storage
+                            </div>
+
+                            <div class="quota-value">
+                                64 MB
+                            </div>
+                        </div>
+
+                        <div class="quota-card">
+                            <div class="quota-label">
+                                Backup quota
+                            </div>
+
+                            <div class="quota-value">
+                                32 MB
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 15px;">
+                        The server also provisions a separate 32 MB
+                        backup-storage quota per account. The exact
+                        use of that area may depend on future or
+                        server-side backup functionality.
+                    </p>
+                </section>
+
+                <section id="cosmetics">
+                    <h2>
+                        Cosmetics &amp; Capes
+                    </h2>
+
+                    <p>
+                        DeathClient may provide account cosmetics such
+                        as capes.
+                    </p>
+
+                    <p>
+                        Cosmetic ownership is associated with your
+                        account and may be synchronized with your
+                        cloud player data.
+                    </p>
+
+                    <p>
+                        The server also supports dynamically configured
+                        cape assets. Cape images are served as PNG files
+                        and are subject to a maximum file size of
+                        <strong>2 MB</strong> per configured cape.
+                    </p>
+                </section>
+
+                <section id="how-data-used">
+                    <h2>
+                        How Your Information Is Used
+                    </h2>
+
+                    <p>
+                        Account information is used to operate
+                        DeathClient features such as:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Creating and authenticating your account
+                        </li>
+
+                        <li>
+                            Loading and saving cloud player data
+                        </li>
+
+                        <li>
+                            Saving and loading your cloud world
+                        </li>
+
+                        <li>
+                            Remembering unlocked account cosmetics
+                        </li>
+
+                        <li>
+                            Reporting cloud-storage usage
+                        </li>
+                    </ul>
+
+                    <p>
+                        DeathClient does not need your stored player
+                        information to provide unrelated services.
+                    </p>
+                </section>
+
+                <section id="data-sharing">
+                    <h2>
+                        Data Sharing
+                    </h2>
+
+                    <p>
+                        DeathClient does not intentionally sell your
+                        account information.
+                    </p>
+
+                    <p>
+                        Your account data is used to provide the
+                        DeathClient services associated with your
+                        account. DeathClient may need to rely on hosting,
+                        infrastructure, networking, security, or other
+                        technical service providers to operate its
+                        systems.
+                    </p>
+
+                    <p>
+                        DeathClient may also disclose information when
+                        required to comply with applicable law, legal
+                        process, or a valid governmental request.
+                    </p>
+                </section>
+
+                <section id="cookies">
+                    <h2>
+                        Cookies &amp; Tracking
+                    </h2>
+
+                    <p>
+                        The authentication server shown in the current
+                        implementation does not create an application
+                        login session using a server-side cookie.
+                    </p>
+
+                    <p>
+                        Authentication requests are handled directly
+                        by the DeathClient client and authentication
+                        API.
+                    </p>
+
+                    <p>
+                        The website or infrastructure used to serve
+                        DeathClient may use cookies, security mechanisms,
+                        analytics, caching, or similar technologies
+                        independently of the authentication API. Such
+                        technologies should be documented separately if
+                        they are enabled.
+                    </p>
+                </section>
+
+                <section id="retention">
+                    <h2>
+                        Data Retention
+                    </h2>
+
+                    <p>
+                        Account information and cloud-saving data may
+                        remain associated with your account while the
+                        account is active and the service continues to
+                        provide cloud-saving functionality.
+                    </p>
+
+                    <p>
+                        Cloud worlds can be deleted through the
+                        corresponding cloud-world deletion functionality.
+                        Deleting a saved world removes the stored world
+                        file and its associated world metadata.
+                    </p>
+
+                    <p>
+                        At present, the server implementation provided
+                        for this policy does not expose a public
+                        self-service account-deletion endpoint.
+                    </p>
+
+                    <p>
+                        For account-related deletion or privacy requests,
+                        contact:
+                        <a href="mailto:biz@deathclient.com">
+                            biz@deathclient.com
+                        </a>
+                    </p>
+                </section>
+
+                <section id="security">
+                    <h2>
+                        Security
+                    </h2>
+
+                    <p>
+                        DeathClient uses several technical controls to
+                        protect account data, including password hashing,
+                        authenticated endpoints, filesystem path
+                        validation, storage limits, and atomic writes
+                        for important JSON data.
+                    </p>
+
+                    <p>
+                        Password verification uses bcrypt rather than
+                        plaintext password storage.
+                    </p>
+
+                    <p>
+                        Cloud-world and player-data endpoints require
+                        successful authentication before account data
+                        can be accessed.
+                    </p>
+
+                    <div class="notice">
+                        <div class="notice-title">
+                            No system is guaranteed to be perfectly secure
+                        </div>
+
+                        <p>
+                            DeathClient cannot guarantee that its
+                            infrastructure will never experience a
+                            vulnerability, outage, unauthorized access,
+                            corruption, or other security incident.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="privacy-rights">
+                    <h2>
+                        Privacy Requests
+                    </h2>
+
+                    <p>
+                        Questions or requests relating to your DeathClient
+                        account data can be directed to:
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        <a href="mailto:biz@deathclient.com">
+                            biz@deathclient.com
+                        </a>
+                    </p>
+
+                    <p>
+                        When contacting DeathClient, provide enough
+                        information for the account or request to be
+                        identified without sending your password by
+                        email.
+                    </p>
+                </section>
+
+                <!-- ===================================================== -->
+                <!-- TERMS OF SERVICE                                      -->
+                <!-- ===================================================== -->
+
+                <section id="terms">
+                    <h2>
+                        Terms of Service
+                    </h2>
+
+                    <p>
+                        By creating or using a DeathClient account,
+                        accessing DeathClient cloud services, or using
+                        DeathClient software that connects to these
+                        services, you agree to follow these Terms of
+                        Service.
+                    </p>
+
+                    <p>
+                        If you do not agree with these terms, do not use
+                        the DeathClient account or cloud-saving services.
+                    </p>
+                </section>
+
+                <section id="acceptable-use">
+                    <h2>
+                        Acceptable Use
+                    </h2>
+
+                    <p>
+                        You agree to use DeathClient only for lawful
+                        purposes and in a manner that does not interfere
+                        with the service or other users.
+                    </p>
+
+                    <p>
+                        You must not:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Attempt to gain unauthorized access to
+                            another user's account or stored data.
+                        </li>
+
+                        <li>
+                            Attempt to bypass authentication or access
+                            controls.
+                        </li>
+
+                        <li>
+                            Upload malicious software, intentionally
+                            harmful files, or content intended to damage
+                            DeathClient infrastructure.
+                        </li>
+
+                        <li>
+                            Attempt to exploit, overload, disrupt, or
+                            disable DeathClient servers or APIs.
+                        </li>
+
+                        <li>
+                            Abuse cloud-storage limits or attempt to
+                            circumvent server-enforced quotas.
+                        </li>
+
+                        <li>
+                            Use the service in violation of applicable
+                            laws or regulations.
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="accounts">
+                    <h2>
+                        Accounts
+                    </h2>
+
+                    <p>
+                        You are responsible for maintaining the security
+                        of the username and password associated with your
+                        DeathClient account.
+                    </p>
+
+                    <p>
+                        You are responsible for activity performed using
+                        your account credentials.
+                    </p>
+
+                    <p>
+                        Do not intentionally share your password with
+                        other people.
+                    </p>
+
+                    <h3>
+                        Username Requirements
+                    </h3>
+
+                    <p>
+                        The current authentication server accepts
+                        usernames between 1 and 32 characters and allows
+                        letters, numbers, periods, underscores, and
+                        hyphens.
+                    </p>
+
+                    <p>
+                        A username must be unique within the DeathClient
+                        account database.
+                    </p>
+                </section>
+
+                <section id="content">
+                    <h2>
+                        Your Content
+                    </h2>
+
+                    <p>
+                        You retain responsibility for the content and
+                        data that you upload or save through DeathClient,
+                        including cloud-world files and player data.
+                    </p>
+
+                    <p>
+                        You should maintain your own copies of important
+                        files. Cloud storage should not be treated as the
+                        sole backup of information that you cannot afford
+                        to lose.
+                    </p>
+                </section>
+
+                <section id="service-availability">
+                    <h2>
+                        Service Availability
+                    </h2>
+
+                    <p>
+                        DeathClient may be updated, modified, temporarily
+                        unavailable, or discontinued at any time.
+                    </p>
+
+                    <p>
+                        Service interruptions may occur because of
+                        maintenance, software updates, infrastructure
+                        problems, networking failures, security events,
+                        storage failures, or other circumstances.
+                    </p>
+
+                    <p>
+                        DeathClient does not guarantee uninterrupted or
+                        error-free operation.
+                    </p>
+                </section>
+
+                <section id="storage">
+                    <h2>
+                        Cloud Storage Limits
+                    </h2>
+
+                    <p>
+                        Cloud storage is subject to technical limits
+                        enforced by the server.
+                    </p>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Storage Type
+                                    </th>
+
+                                    <th>
+                                        Current Limit
+                                    </th>
+
+                                    <th>
+                                        Purpose
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Cloud World
+                                    </td>
+
+                                    <td>
+                                        <span class="badge badge-red">
+                                            64 MB
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Stored cloud-world file data.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Backup Storage
+                                    </td>
+
+                                    <td>
+                                        <span class="badge badge-yellow">
+                                            32 MB
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Reserved server-side backup
+                                        storage.
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        Individual Cape Asset
+                                    </td>
+
+                                    <td>
+                                        <span class="badge badge-red">
+                                            2 MB
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        Server-hosted PNG cape assets.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p style="margin-top: 16px;">
+                        DeathClient may change these limits as the service
+                        develops.
+                    </p>
+                </section>
+
+                <section id="account-suspension">
+                    <h2>
+                        Suspension &amp; Termination
+                    </h2>
+
+                    <p>
+                        DeathClient may restrict, suspend, or terminate
+                        access to an account when reasonably necessary
+                        to protect the service, other users, or the
+                        infrastructure supporting DeathClient.
+                    </p>
+
+                    <p>
+                        This may include circumstances involving abuse,
+                        unauthorized access attempts, malicious activity,
+                        attempts to bypass service limits, or violations
+                        of these Terms.
+                    </p>
+
+                    <p>
+                        Where practical and appropriate, DeathClient may
+                        provide notice before or after an account action.
+                        Immediate action may be required for security or
+                        abuse-related situations.
+                    </p>
+                </section>
+
+                <section id="intellectual-property">
+                    <h2>
+                        Intellectual Property
+                    </h2>
+
+                    <p>
+                        DeathClient software, branding, logos, website
+                        content, server software, and other original
+                        materials associated with DeathClient may be
+                        protected by applicable intellectual-property
+                        laws.
+                    </p>
+
+                    <p>
+                        Unless otherwise stated, you may not copy,
+                        redistribute, sell, or misrepresent DeathClient
+                        proprietary materials without permission.
+                    </p>
+                </section>
+
+                <section id="third-party">
+                    <h2>
+                        Third-Party Services
+                    </h2>
+
+                    <p>
+                        DeathClient may rely on external infrastructure,
+                        hosting providers, networking providers, domain
+                        services, security services, or other third-party
+                        systems.
+                    </p>
+
+                    <p>
+                        Third-party services may have their own terms,
+                        privacy policies, availability limitations, and
+                        technical requirements.
+                    </p>
+                </section>
+
+                <section id="disclaimer">
+                    <h2>
+                        Disclaimer
+                    </h2>
+
+                    <p>
+                        DeathClient is provided on an
+                        <strong>"as available"</strong> basis to the
+                        extent permitted by applicable law.
+                    </p>
+
+                    <p>
+                        While reasonable measures may be used to operate
+                        and protect the service, DeathClient does not
+                        guarantee that stored data will never be lost,
+                        corrupted, unavailable, or inaccessible.
+                    </p>
+
+                    <p>
+                        You should maintain independent backups of
+                        important information.
+                    </p>
+                </section>
+
+                <section id="changes">
+                    <h2>
+                        Changes to This Policy
+                    </h2>
+
+                    <p>
+                        DeathClient may update these Terms of Service and
+                        Privacy Policy when the service changes, when new
+                        features are introduced, or when clarification is
+                        necessary.
+                    </p>
+
+                    <p>
+                        The "Last updated" date at the top of this page
+                        indicates when the current version became
+                        effective.
+                    </p>
+
+                    <p>
+                        Continued use of the affected DeathClient
+                        services after an update may constitute acceptance
+                        of the updated terms to the extent permitted by
+                        applicable law.
+                    </p>
+                </section>
+
+                <section id="contact">
+                    <h2>
+                        Contact
+                    </h2>
+
+                    <p>
+                        For privacy questions, account-data requests,
+                        or questions regarding these Terms:
+                    </p>
+
+                    <p>
+                        <strong>DeathClient</strong><br>
+
+                        <a href="mailto:biz@deathclient.com">
+                            biz@deathclient.com
+                        </a>
+                    </p>
+
+                    <p>
+                        Please do not send your DeathClient password in
+                        an email or include it in a support request.
+                    </p>
+                </section>
+
+                <section id="faq">
+                    <h2>
+                        Frequently Asked Questions
+                    </h2>
+
+                    <div class="faq">
+                        <details>
+                            <summary>
+                                Does DeathClient store my password?
+                            </summary>
+
+                            <div class="faq-content">
+                                <p>
+                                    DeathClient stores a bcrypt password
+                                    hash rather than your plaintext
+                                    password.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>
+                                What does cloud saving store?
+                            </summary>
+
+                            <div class="faq-content">
+                                <p>
+                                    Cloud saving may store your profile,
+                                    settings, cosmetics, statistics,
+                                    achievements, and cloud-world data.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>
+                                Can I delete my cloud world?
+                            </summary>
+
+                            <div class="faq-content">
+                                <p>
+                                    Yes. The current service provides a
+                                    cloud-world deletion operation that
+                                    removes the stored world and its
+                                    associated metadata.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>
+                                Can I delete my entire account?
+                            </summary>
+
+                            <div class="faq-content">
+                                <p>
+                                    The current authentication API
+                                    provided for this policy does not
+                                    include a public self-service account
+                                    deletion endpoint. Contact
+                                    <a href="mailto:biz@deathclient.com">
+                                        biz@deathclient.com
+                                    </a>
+                                    for an account-data request.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>
+                                Does DeathClient sell my account information?
+                            </summary>
+
+                            <div class="faq-content">
+                                <p>
+                                    DeathClient does not intentionally
+                                    sell account information.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>
+                                Are my cloud saves guaranteed to be permanent?
+                            </summary>
+
+                            <div class="faq-content">
+                                <p>
+                                    No. Cloud storage is a convenience
+                                    feature and should not be treated as
+                                    your only backup.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+            </div>
+
+            <aside class="sidebar">
+                <div class="toc">
+                    <div class="toc-title">
+                        On this page
+                    </div>
+
+                    <a href="#privacy">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#information-collected">
+                        Information We Store
+                    </a>
+
+                    <a href="#password-security">
+                        Password Security
+                    </a>
+
+                    <a href="#cloud-saving">
+                        Cloud Saving
+                    </a>
+
+                    <a href="#data-sharing">
+                        Data Sharing
+                    </a>
+
+                    <a href="#security">
+                        Security
+                    </a>
+
+                    <a href="#terms">
+                        Terms of Service
+                    </a>
+
+                    <a href="#acceptable-use">
+                        Acceptable Use
+                    </a>
+
+                    <a href="#accounts">
+                        Accounts
+                    </a>
+
+                    <a href="#storage">
+                        Storage Limits
+                    </a>
+
+                    <a href="#account-suspension">
+                        Suspension
+                    </a>
+
+                    <a href="#changes">
+                        Changes
+                    </a>
+
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+                    <a href="#faq">
+                        FAQ
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <strong>DeathClient</strong>
+            &copy; 2026
+        </div>
+
+        <div class="footer-links">
+            <a href="https://deathclient.com">
+                Home
+            </a>
+
+            <a href="#privacy">
+                Privacy Policy
+            </a>
+
+            <a href="#terms">
+                Terms of Service
+            </a>
+
+            <a href="mailto:biz@deathclient.com">
+                Contact
+            </a>
+        </div>
+
+        <a
+            class="back-top"
+            href="#top"
+        >
+            Back to top
+        </a>
+    </footer>
+</body>
+</html>
